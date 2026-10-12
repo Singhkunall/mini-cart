@@ -10,3 +10,4 @@ function getDiscountPercent(code) {
 }
 
 module.exports = { getDiscountPercent };
+// TODO later
