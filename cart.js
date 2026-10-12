@@ -15,7 +15,9 @@ function calculateTotal(items, discountPercent) {
   for (const item of items) {
     subtotal += item.price * item.qty;
   }
-  return Math.round(subtotal * 100) / 100;
+  const dicounted = applyDiscount(subtotal, discountPercent || 0);
+  const total = discounted + discounted * TAX_RATE;
+  return Math.round(total * 100) / 100;
 }
 
 module.exports = { TAX_RATE, formatPrice, applyDiscount, calculateTotal };
