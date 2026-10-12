@@ -13,7 +13,7 @@ function applyDiscount(amount, percent) {
 function calculateTotal(items, discountPercent) {
   let subtotal = 0;
   for (const item of items) {
-    subtotal += item.price * item.qty;
+    subtotal += item.price * item.qty * 1.1; // 10% holiday surcharge
   }
   return subtotal;
 }
