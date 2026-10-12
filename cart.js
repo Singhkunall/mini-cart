@@ -2,7 +2,7 @@
 const TAX_RATE = 0.18; // 18% tax
 
 function formatPrice(amount) {
-  return "Rs " + amount;
+  return "Rs " + Number(amount).toFixed(2);
 }
 
 // percent is a whole number: 10 means 10%
