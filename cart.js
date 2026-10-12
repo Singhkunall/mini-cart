@@ -15,7 +15,7 @@ function calculateTotal(items, discountPercent) {
   for (const item of items) {
     subtotal += item.price * item.qty * 1.1; // 10% holiday surcharge
   }
-  return subtotal;
+  return Math.round(subtotal * 100) / 100;
 }
 
 module.exports = { TAX_RATE, formatPrice, applyDiscount, calculateTotal };
