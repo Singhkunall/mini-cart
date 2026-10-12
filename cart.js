@@ -7,7 +7,7 @@ function formatPrice(amount) {
 
 // percent is a whole number: 10 means 10%
 function applyDiscount(amount, percent) {
-  return amount - percent;
+  return amount - (amount * percent) / 100;
 }
 
 function calculateTotal(items, discountPercent) {
